@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* transform - 변형 속성 기본값은 none */
+.item {
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+}
+.tr1 {
+    background-color: lightcoral;
+}
+.tr1:hover {
+    transform: rotate(-45deg);
+    transform: rotateX(-90deg);
+    transform: rotateY(-180deg);
+    /* rotate - 회전속성 / 기본값은 x + y가 합쳐진 속성
+    단독으로 사용 가능 예를 들어 rotateX / rotateY > x,y는 대문자 사용 권장 > 소문자로 작성해도 동작은 함
+    단위 > 각도(deg) / px */
+}
+.tr2 {
+    background-color: lightblue;
+}
+.tr2:hover {
+    transform: scale(2);
+    transform: scaleX(2);
+    transform: scaleY(2);
+    /* scale - 확대속성 / 기본값은 x + y가 합쳐진 속성
+    단독으로 사용 가능 예를 들어 scaleX / scaleY > x,y는 대문자 사용 권장 > 소문자로 작성해도 동작은 함 
+    x와y를 같이 써야 되나, 값이 다르다면 ,를 이용해 값을 설정
+    예) scale(1.5, 3) */
+}
+.tr3 {
+    background-color: #ededed;
+}
+.tr3:hover {
+    transform: skew(-45deg, -45deg);
+    transform: skewX(-20deg);
+    transform: skewY(-20deg);
+    /* skew - 기울임 / 기본값은 x + y가 합쳐져 있으나, 값이 같더라도 반드시 ,를 통해 2번 입력해야 동작한다. 만약 미 입력시 x축이 동작 
+    예) skew(30deg, 30deg)
+    단독으로 사용 가능 예를 들어 scaleX / scaleY > x,y는 대문자 사용 권장 > 소문자로 작성해도 동작은 함 */
+}
+.tr4 {
+    background-color: gold;
+}
+.tr4:hover {
+    transform: translate(50px, 50px);
+    transform: translateX(50%);
+    transform: translateY(-50%) scale(1.2) rotate(45deg);
+    /* transform 여러개 사용시 ,사용없이 띄우고 사용 */
+}
